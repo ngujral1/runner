@@ -1,0 +1,13 @@
+name: manual
+
+on: [workflow_dispatch]
+
+jobs:
+  check-quality:
+    runs-on: [self-hosted, linux]
+    name: test on-prem
+    steps:
+    - name: Echo version of aws-cli
+      uses: hannut91/aws-cli@1.18.43
+      with:
+        args: help
